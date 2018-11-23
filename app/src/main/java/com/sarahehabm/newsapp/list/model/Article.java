@@ -1,10 +1,13 @@
 package com.sarahehabm.newsapp.list.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Date;
 
-public class Article {
+public class Article implements Parcelable {
     @SerializedName("author")
     private String author;
 
@@ -34,6 +37,15 @@ public class Article {
         this.url = url;
         this.urlToImage = urlToImage;
         this.publishedAt = publishedAt;
+    }
+
+    public Article(Parcel parcel) {
+        this.author = parcel.readString();
+        this.title = parcel.readString();
+        this.description = parcel.readString();
+        this.url = parcel.readString();
+        this.urlToImage = parcel.readString();
+        this.publishedAt = new Date(parcel.readLong());
     }
 
     public String getAuthor() {
@@ -83,4 +95,31 @@ public class Article {
     public void setPublishedAt(Date publishedAt) {
         this.publishedAt = publishedAt;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(this.author);
+        parcel.writeString(this.title);
+        parcel.writeString(this.description);
+        parcel.writeString(this.url);
+        parcel.writeString(this.urlToImage);
+        parcel.writeLong(this.publishedAt.getTime());
+    }
+
+    public static final Creator<Article> CREATOR = new Creator<Article>() {
+        @Override
+        public Article createFromParcel(Parcel in) {
+            return new Article(in);
+        }
+
+        @Override
+        public Article[] newArray(int size) {
+            return new Article[size];
+        }
+    };
 }
