@@ -21,6 +21,7 @@
             android:layout_height="wrap_content"
             android:contentDescription="@string/image_description"
             tools:src="@drawable/placeholder"
+            android:scaleType="centerCrop"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
