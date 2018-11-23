@@ -1,5 +1,6 @@
 package com.sarahehabm.newsapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -12,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.sarahehabm.newsapp.detail.DetailsActivity;
 import com.sarahehabm.newsapp.list.model.Article;
 import com.sarahehabm.newsapp.list.ui.ListFragment;
 
@@ -79,6 +81,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onListFragmentInteraction(Article article) {
-        //TODO implement to handle item selection
+        Intent intent = new Intent(this, DetailsActivity.class);
+        startActivity(intent);
     }
 }
