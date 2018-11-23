@@ -3,6 +3,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_arrow_desc">Navigation header arrow</string>
     <string name="explore">Explore</string>
     <string name="live_chat">Live Chat</string>
     <string name="gallery">Gallery</string>
