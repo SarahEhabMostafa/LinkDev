@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
@@ -102,6 +103,7 @@ public class DetailsActivity extends AppCompatActivity {
         textView_author.setText(by_author);
 
         textView_description.setText(article.getDescription());
+        textView_description.setMovementMethod(new ScrollingMovementMethod());
     }
 
     @OnClick(R.id.button_open)
