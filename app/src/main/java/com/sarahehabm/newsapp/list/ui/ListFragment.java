@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -134,6 +135,6 @@ public class ListFragment extends Fragment implements ListPresenterListener {
     }
 
     public interface OnListFragmentInteractionListener {
-        void onListFragmentInteraction(Article article);
+        void onListFragmentInteraction(Article article, ImageView imageView, TextView textView);
     }
 }

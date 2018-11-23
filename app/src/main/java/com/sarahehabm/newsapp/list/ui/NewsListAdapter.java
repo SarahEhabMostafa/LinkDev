@@ -63,7 +63,8 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.ViewHo
         String formattedDate = Utilities.formatDate(article.getPublishedAt());
         holder.textView_date.setText(formattedDate);
 
-        holder.root.setOnClickListener(v -> listener.onListFragmentInteraction(holder.article));
+        holder.root.setOnClickListener(v -> listener.onListFragmentInteraction(
+                holder.article, holder.imageView, holder.textView_title));
     }
 
     @Override
