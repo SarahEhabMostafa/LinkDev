@@ -19,4 +19,5 @@
     <string name="error">An unknown error has occured. Please try again later.</string>
     <string name="search">Search</string>
     <string name="title_activity_details">DetailsActivity</string>
+    <string name="open_website">Open Website</string>
 </resources>

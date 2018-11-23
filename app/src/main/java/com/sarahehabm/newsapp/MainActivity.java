@@ -13,7 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.sarahehabm.newsapp.detail.DetailsActivity;
+import com.sarahehabm.newsapp.details.ui.DetailsActivity;
 import com.sarahehabm.newsapp.list.model.Article;
 import com.sarahehabm.newsapp.list.ui.ListFragment;
 
@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onListFragmentInteraction(Article article) {
         Intent intent = new Intent(this, DetailsActivity.class);
+        intent.putExtra(DetailsActivity.KEY_ARTICLE, article);
         startActivity(intent);
     }
 }

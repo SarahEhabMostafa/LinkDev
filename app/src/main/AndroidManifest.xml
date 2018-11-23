@@ -24,7 +24,7 @@
         </activity>
 
         <activity
-            android:name=".detail.DetailsActivity"
+            android:name=".details.ui.DetailsActivity"
             android:label="@string/title_activity_details"
             android:screenOrientation="portrait" />
     </application>
