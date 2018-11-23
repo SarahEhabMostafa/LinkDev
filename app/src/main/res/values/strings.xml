@@ -11,4 +11,10 @@
     <string name="e_magazine">E-Magazine</string>
     <string name="welcome">Welcome</string>
     <string name="name">Tony Rochdy</string>
+    <string name="image_description">Image of the news item</string>
+    <string name="by_author">By %s</string>
+    <string name="n_a">N/A</string>
+    <string name="empty">No data found</string>
+    <string name="retry">Retry</string>
+    <string name="error">An unknown error has occured. Please try again later.</string>
 </resources>
